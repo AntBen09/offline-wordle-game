@@ -208,7 +208,7 @@ def printBoard(lines):
         print(guess)
 
 def checkGuess(inputWord):
-    if (inputWord == word):
+    if (inputWord.lower() == word.lower()):
         return True
     else:
         return False
@@ -255,6 +255,6 @@ while (guessNum < 5):
         guessNum += 1
 
 makeBoard(inputWord, get_colors(inputWord, word))
-print("The correct word was: " + word)
+print("The correct word was: " + word.upper())
 if gameOver == True:
     print("You solved in " + str(guessNum + 1) + " guesses")
